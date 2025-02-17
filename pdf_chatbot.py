@@ -38,7 +38,7 @@ TOGETHER_API_KEY = os.getenv("TOGETHER_API_KEY")
 # Page configuration
 st.set_page_config(
     page_title="Multi-Source Chat",
-    page_icon="🤖",
+    page_icon="📚",
     layout="wide"
 )
 
@@ -293,7 +293,7 @@ with st.sidebar:
         
         if uploaded_files:
             file_names = [file.name for file in uploaded_files]
-            st.write("📑 Uploaded files:")
+            st.write("📖 Uploaded files:")
             for name in file_names:
                 st.write(f"- {name}")
             
@@ -324,10 +324,10 @@ with st.sidebar:
 
 
 # Main chat interface
-st.title("🤖 Multi-Source Chat Assistant")
+st.title("📚 Multi-Source Chat Assistant")
 
 if not st.session_state.processComplete:
-    st.info("👈 Please select a source and process content to begin chatting!")
+    st.info("← Please select a source and process content to begin chatting!")
 else:
     st.caption(f"Currently chatting with: {st.session_state.source_type} content")
     
